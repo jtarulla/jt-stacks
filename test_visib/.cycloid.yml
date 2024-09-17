@@ -1,21 +1,20 @@
-# Use the latest version 2 of the Cycloid stack engine.
-version: 3
+version: "2"
 name: test visib
 canonical: test_visib
-author: 'admin'
-# Fill in the stack details.
-description: 'The bare minimum files to build your stack from scratch.'
+author: admin
+description: The bare minimum files to build your stack from scratch.
 image: https://github.com/cycloidio/bootstrap-stacks/blob/master/blank-sample/thumbnail.png
+keywords: []
 template: false
-status: 'public'
-# Add use cases to the stack.
-# See: https://docs.cycloid.io/manage/pipeline/multi-use-case.html#multiple-use-case
+template_ignore: []
+technologies: []
+dependencies: []
 config:
   default:
-    name: 'Default'
+    name: Default
     pipeline:
       pipeline:
-        path: 'pipeline/pipeline.yml'
+        path: pipeline/pipeline.yml
       variables:
-        path: 'pipeline/variables.sample.yml'
-        destination: '($ .project $)/pipeline/variables-($ .environment $).yml'
+        destination: ($ .project $)/pipeline/variables-($ .environment $).yml
+        path: pipeline/variables.sample.yml
