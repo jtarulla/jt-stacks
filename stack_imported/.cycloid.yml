@@ -1,0 +1,22 @@
+version: "2"
+name: Stack imported
+canonical: stack_imported
+author: admin
+description: imported
+image: ""
+keywords:
+- imported
+- provider:aws
+template: false
+template_ignore: []
+technologies: []
+dependencies: []
+config:
+  default:
+    name: default
+    pipeline:
+      pipeline:
+        path: pipeline/default/terraform-pipeline.yaml
+      variables:
+        destination: ($ project $)/pipeline/variables-($ environment $).yml
+        path: pipeline/default/variables.sample.yaml
