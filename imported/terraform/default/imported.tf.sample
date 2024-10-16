@@ -1,0 +1,4 @@
+module "imported" {
+  source = "./module-imported"
+}
+
