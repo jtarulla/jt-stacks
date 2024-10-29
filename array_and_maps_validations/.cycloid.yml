@@ -1,7 +1,7 @@
 version: "2"
 name: array and maps validations
 canonical: array_and_maps_validations
-author: '{{ stack_author }}'
+author: Javier
 description: The bare minimum files to build your stack from scratch.
 image: https://github.com/cycloidio/bootstrap-stacks/blob/master/blank-sample/thumbnail.png
 keywords: []
