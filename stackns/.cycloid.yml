@@ -1,0 +1,22 @@
+version: "2"
+name: stackns
+canonical: stackns
+author: admin
+description: stack
+image: ""
+keywords:
+- stack
+- provider:aws
+template: false
+template_ignore: []
+technologies: []
+dependencies: []
+config:
+  default:
+    name: default
+    pipeline:
+      pipeline:
+        path: pipeline/default/terraform-pipeline.yaml
+      variables:
+        destination: ($ project $)/pipeline/variables-($ environment $).yml
+        path: pipeline/default/variables.sample.yaml
