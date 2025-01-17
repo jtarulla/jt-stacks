@@ -1,9 +1,9 @@
 # Define jobs that form the pipeline
 jobs:
-- name: example-job
+- name: example-job-hey
   build_logs_to_retain: 12
   plan:
-  - task: example-task
+  - task: example-task-tes
     config:
       platform: linux
       image_resource:

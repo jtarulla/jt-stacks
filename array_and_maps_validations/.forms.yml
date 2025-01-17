@@ -31,3 +31,33 @@ use_cases:
               error_message: 'lb1 must be present'
             - array:
                 max_elems: 2
+- name: validation2
+  sections:
+  - name: Example section
+    groups:
+    - name: Example group
+      technologies: [pipeline]
+      vars:
+        - widget: "dropdown"
+          values: [[ "lb2",32223], [ "lb1", 32223], [ "lb3", 52224, 'test']]
+          type: "array"
+          description: "something k2"
+          key: "key-test-no-validation"
+          name: "array variable"
+          widget_config:
+              multiselect: true
+
+        - widget: "dropdown"
+          values: [[ "lb2",32223], [ "lb1", 32223], [ "lb3", 52224, 'test']]
+          type: "array"
+          description: "something k2"
+          key: "key-test"
+          name: "array variable"
+          widget_config:
+              multiselect: true
+          validations:
+            - array:
+                must_exist_elems: [["lb1", 32223]]
+              error_message: 'lb1 must be present'
+            - array:
+                max_elems: 2
