@@ -1,5 +1,5 @@
 version: "2"
-name: array and maps validations
+name: array and maps validations test
 canonical: array_and_maps_validations
 author: Javier
 description: The bare minimum files to build your stack from scratch.
