@@ -5,7 +5,7 @@ use_cases:
   sections:
   - name: Example section
     groups:
-    - name: Example group
+    - name: Example group1
       technologies: [pipeline]
       vars:
         - widget: "dropdown"
@@ -35,7 +35,7 @@ use_cases:
   sections:
   - name: Example section
     groups:
-    - name: Example group
+    - name: Example group2
       technologies: [pipeline]
       vars:
         - widget: "dropdown"
