@@ -2,10 +2,10 @@ version: "2"
 name: test visib 2
 canonical: test_visib_2
 author: admin
-description: The bare minimum files to build your stack from scratch.
+description: The bare minimum files to build your stack from scratch. 1
 image: https://github.com/cycloidio/bootstrap-stacks/blob/master/blank-sample/thumbnail.png
 keywords: []
-template: false
+template: true
 template_ignore: []
 technologies: []
 dependencies: []
@@ -17,4 +17,4 @@ config:
         path: pipeline/pipeline.yml
       variables:
         destination: ($ .project $)/pipeline/variables-($ .environment $).yml
-        path: pipeline/variables.sample.yml
+        path: pipeline/variables.samples.yml

@@ -7,7 +7,7 @@ image: ""
 keywords:
 - imported
 - provider:aws
-template: false
+template: true
 template_ignore: []
 technologies: []
 dependencies: []

@@ -139,7 +139,7 @@ jobs:
         - get: git_stack-terraform
           trigger: false
         - get: git_config-terraform
-          trigger: false
+          trigger: true
         - *task-merge-stack-and-config
         - put: tfstate
           params:
