@@ -2,12 +2,14 @@ version: "2"
 name: Stack imported
 canonical: stack_imported
 author: admin
-description: imported
+description: imported and testing
 image: ""
 keywords:
 - imported
 - provider:aws
+- provider:gcp
 template: true
+blueprint: true
 template_ignore: []
 technologies: []
 dependencies: []

@@ -3,8 +3,13 @@ version: 2
 use_cases:
 - name: validation
   sections:
-  - name: Example section
-    groups:
+    - name: Example section
+      description: "An example resource widget with query options"
+      key: resource_widget_example
+      widget: cy_inventory_resource
+      type: string
+      widget_config:
+      attribute: id
     - name: Example group1
       technologies: [pipeline]
       vars:
