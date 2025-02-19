@@ -1,0 +1,32 @@
+version: '4'
+name: gael-v4-terraform-aws
+canonical: gael-v4-terraform-aws
+author: 'admin'
+# Fill in the stack details.
+description: 'Discover how to integrate Terraform in your pipelines.'
+image: https://github.com/cycloidio/bootstrap-stacks/blob/master/blank-sample/thumbnail.png
+keywords:
+  - 'terraform'
+  - 'aws'
+technologies:
+  - technology: terraform
+    version: 1.8.2
+template: false
+status: 'public'
+# Add use cases to the stack.
+# See: https://docs.cycloid.io/manage/pipeline/multi-use-case.html#multiple-use-case
+config:
+  aws:
+    name: 'AWS'
+    description: 'Manage Amazon Web Services (aws) resources.'
+    cloud_provider: aws
+    pipeline:
+      pipeline:
+        path: 'pipeline/pipeline.yml'
+      variables:
+        path: 'pipeline/variables.sample.yml'
+        destination: '($ .organization_canonical $)/($ .project $)/($ .environment $)/($ .component $)/pipeline/variables.yml'
+    terraform:
+      main:
+        path: 'terraform/main.tf.sample'
+        destination: '($ .organization_canonical $)/($ .project $)/($ .environment $)/($ .component $)/terraform/main.tf'
