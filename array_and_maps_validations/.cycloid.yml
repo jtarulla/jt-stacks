@@ -1,4 +1,4 @@
-version: "2"
+version: "4"
 name: array and maps validations test
 canonical: array_and_maps_validations
 author: admin
