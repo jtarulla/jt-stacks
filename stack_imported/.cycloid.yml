@@ -1,27 +1,82 @@
-version: "2"
-name: Stack imported
-canonical: stack_imported
-author: admin
-description: imported and testing
-image: ""
+# Configuration of Cycloid stack
+---
+version: '3'
+name: 'Compute'
+canonical: 'stack-compute'
+status: 'public'
+description: |
+  This stack allows to deploy a configure compute instance in one of the available providers.
 keywords:
-- imported
-- provider:aws
-- provider:gcp
-template: false
-template_ignore: []
-technologies: []
-dependencies: []
+  - 'compute'
+  - 'vm'
+  - 'virtual machine'
+  - 'server'
+  - 'instance'
+  - 'provider:aws'
+  - 'ec2'
+  - 'provider:azure'
+  - 'provider:gcp'
+  - 'gce'
+author: 'Cycloid'
+image: 'https://raw.githubusercontent.com/cycloid-community-catalog/stack-compute/master/docs/icon.png'
+technologies:
+   - technology: AWS
+     version: n/a
+   - technology: Azure
+     version: n/a
+   - technology: GCP
+     version: n/a
 config:
-  default:
-    name: default
+  # define the default environment for aws
+  aws-ec2:
+    name: 'aws-ec2'
+    description: 'Creates a configurable Amazon Elastic Compute Cloud (EC2) in a chosen VPC'
+    cloud_provider: aws
+    # Configuration of the CI pipeline
     pipeline:
       pipeline:
-        path: pipeline/default/terraform-pipeline.yaml
+        path: 'pipeline/pipeline.yml'
       variables:
-        destination: ($ project $)/pipeline/variables-($ environment $).yml
-        path: pipeline/default/variables.sample.yaml
+        path: 'pipeline/variables.sample.yml'
+        destination: '($ .project $)/pipeline/variables-($ .environment $).yml'
+    # Configuration of terraform to setup the infrastructure
     terraform:
-      stack_imported:
-        destination: ($ project $)/terraform/($ environment $)/stack_imported.tf
-        path: terraform/default/stack_imported.tf.sample
+      aws-ec2:
+        path: 'terraform/aws/vm.tf.sample'
+        destination: '($ .project $)/terraform/($ .environment $)/vm.tf'
+
+  # define the default environment for azure
+  azure-linux:
+    name: 'azure-linux'
+    description: 'Creates a configurable Azure Linux Virtual Machine in a chosen VPC'
+    cloud_provider: azurerm
+    # Configuration of the CI pipeline
+    pipeline:
+      pipeline:
+        path: 'pipeline/pipeline.yml'
+      variables:
+        path: 'pipeline/variables.sample.yml'
+        destination: '($ .project $)/pipeline/variables-($ .environment $).yml'
+    # Configuration of terraform to setup the infrastructure
+    terraform:
+      azure-linux:
+        path: 'terraform/azure/vm.tf.sample'
+        destination: '($ .project $)/terraform/($ .environment $)/vm.tf'
+
+  # define the default environment for gcp
+  gcp-gce:
+    name: 'gcp-gce'
+    description: 'Creates a configurable Google Compute Engine (GCE) in a chosen VPC'
+    cloud_provider: google
+    # Configuration of the CI pipeline
+    pipeline:
+      pipeline:
+        path: 'pipeline/pipeline.yml'
+      variables:
+        path: 'pipeline/variables.sample.yml'
+        destination: '($ .project $)/pipeline/variables-($ .environment $).yml'
+    # Configuration of terraform to setup the infrastructure
+    terraform:
+      gcp-gce:
+        path: 'terraform/gcp/vm.tf.sample'
+        destination: '($ .project $)/terraform/($ .environment $)/vm.tf'
