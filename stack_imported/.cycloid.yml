@@ -2,7 +2,7 @@
 ---
 version: '3'
 name: 'Compute'
-canonical: 'stack-compute'
+canonical: 'stack-computes'
 status: 'public'
 description: |
   This stack allows to deploy a configure compute instance in one of the available providers.

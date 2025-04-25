@@ -344,7 +344,7 @@ use_cases:
         widget: text_area
         type: array
         default:
-          - "($ list .org .project .env .component | join "-" $)-network-tag"
+          - "($ list .org .project .env .component .component_name | join "-" $)-network-tag"
       - name: "Instance extra tags"
         description: "A map of key/value label pairs to assign to the instance."
         key: module.vm.instance_extra_labels
