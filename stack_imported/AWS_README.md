@@ -12,7 +12,6 @@ In order to run this task, couple elements are required :
 # Details
 
 ## Pipeline - Params
-
 |Name|Description|Type|Default|Required|
 |---|---|:---:|:---:|:---:|
 |`aws_access_key`|Amazon AWS access key for Terraform. See value format [here](https://docs.cycloid.io/advanced-guide/integrate-and-use-cycloid-credentials-manager.html#vault-in-the-pipeline)|`-`|`((aws.access_key))`|`True`|
