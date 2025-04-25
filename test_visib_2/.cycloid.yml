@@ -5,7 +5,7 @@ author: admin
 description: The bare minimum files to build your stack from scratch. 1
 image: https://github.com/cycloidio/bootstrap-stacks/blob/master/blank-sample/thumbnail.png
 keywords: []
-template: true
+template: false
 template_ignore: []
 technologies: []
 dependencies: []
