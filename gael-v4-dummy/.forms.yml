@@ -3,7 +3,7 @@
 use_cases:
 - name: default
   sections:
-  - name: Example section
+  - name: Example section.
     groups:
     - name: Example group
       technologies: [pipeline]
