@@ -4,7 +4,7 @@ use_cases:
 - name: validation
   sections:
     - name: Example section
-      description: "An example resource widget with query options"
+      description: "An example resource widget with query"
       key: resource_widget_example
       widget: cy_inventory_resource
       type: string
