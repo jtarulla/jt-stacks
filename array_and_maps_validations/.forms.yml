@@ -18,7 +18,7 @@ use_cases:
           type: "array"
           description: "something k2"
           key: "key-test-no-validation"
-          name: "array variable"
+          name: "array variable2"
           widget_config:
               multiselect: true
 
