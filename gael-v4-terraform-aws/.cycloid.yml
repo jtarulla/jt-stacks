@@ -18,7 +18,7 @@ status: 'public'
 config:
   aws:
     name: 'AWS'
-    description: 'Manage Amazon Web Services (aws) resources.'
+    description: 'Manage Amazon Web Services (AWS) resources.'
     cloud_provider: aws
     pipeline:
       pipeline:
