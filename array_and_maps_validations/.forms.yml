@@ -10,7 +10,7 @@ use_cases:
       type: string
       widget_config:
       attribute: id
-    - name: Example group1
+    - name: Example
       technologies: [pipeline]
       vars:
         - widget: "dropdown"
